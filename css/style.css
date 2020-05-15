@@ -1,0 +1,277 @@
+/* GLOBAL styles */
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #bbbb9a;
+}
+
+h1 {
+    font-size: 1.4em;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 1px solid #838369;
+    padding: 30px 0 20px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+main {
+    padding: 0 2%;
+}
+
+/* HEADER styles */
+header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    padding: 2%;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+}
+
+header nav .fa {
+    font-size: 2em;
+}
+
+header .menu {
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    height: auto;
+    max-height: 0;
+    transition: max-height 300ms ease-in-out;
+}
+
+header .menu li {
+    border-bottom: 1px solid #838369;
+    margin-bottom: 3%;
+}
+
+header #toggle:checked + .menu {
+    max-height: 500px;
+}
+
+header label {
+    text-align: right;
+    cursor: pointer;
+}
+
+header input {
+    display: none; /* because I want to hide the chechbox. */
+}
+
+header .logo-container {
+    margin-bottom: -40px;
+}
+
+/* GALLERY styles */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2%;
+}
+
+.gallery .gallery-item {
+    flex-grow: 1;
+    display: none;
+}
+
+.gallery .gallery-item.active {
+    display: block;
+}
+
+.gallery .gallery-item img {
+    width: 100%;
+}
+
+.gallery .gallery-item-description {
+    display: none;
+}
+
+/* THUMBNAIL GALERY styles */
+.thumbnails-container {
+    display: flex;
+    padding: 0;
+}
+
+.thumbnail {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.thumbnail img {
+    border: 1px solid white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.thumbnail p {
+    margin: 0;
+    display: none;
+}
+
+/* SUB-BANNER styles */
+.sub-banner {
+    display: none;
+}
+
+/* MAIN styles */
+main .posts {
+    display: flex;
+}
+
+main article {
+    padding: 0 3%;
+}
+
+main article a {
+    color: #bababa;
+}
+
+main .posts img {
+    width: 180px;
+    padding-right: 3%;
+    border-right: 1px solid #838369;
+}
+
+/* FOOTER styles */
+footer {
+    background-color: #3a3a3a;
+    overflow: hidden;
+    font-size: .9em;
+    text-align: center;
+    margin: 20px 2% 0;
+}
+
+
+
+@media screen and (min-width: 769px) {
+    /* GLOBAL styles */
+    h2 {
+        font-size: 2em;
+    } 
+
+    /* HEADER styles */
+    header nav {
+        align-items: flex-end;
+        flex-direction: row;
+    }
+
+    header label {
+        display: none;
+    }
+
+    header .menu {
+        display: flex;
+        flex-grow: 1;
+        max-height: initial;
+        justify-content: flex-end;
+    }
+
+    header #toggle:checked + .menu {
+        display: flex;
+    }
+
+    header .menu li {
+        margin-right: 4%;
+        border-bottom: none;
+    }
+
+    header {
+        margin-bottom: 0;
+    }
+
+    /* GALLERY styles */
+    .gallery .gallery-item-description {
+        display: block;
+    }
+
+    .gallery {
+        flex-direction: row;
+        padding: 0 2%;
+    }
+
+    /* THUMBNAIL GALERY styles */
+    .thumbnails-container {
+        padding: 0 5%;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 35%;
+        box-sizing: border-box;
+    }
+
+    .thumbnails-container li {
+        border-bottom: none;
+    }
+
+    .thumbnail img {
+        margin-right: 10px;
+        border: 1px solid white;
+    }
+
+    .thumbnail {
+        display: flex;
+        text-align: left;
+        margin-bottom: 8%;
+        align-items: flex-start;
+    }
+
+    .thumbnail p {
+        display: block;
+    }
+
+    /* SUB-BANNER styles */
+    .sub-banner {
+        display: block;
+        padding: 1% 2%;
+        margin: 0 2%;
+        background-color: #3a3a3a;
+    }
+
+    .sub-banner p {
+        font-size: 1.2em;
+        font-weight: 600;
+        line-height: 1.4em;
+    }
+
+    /* MAIN styles */
+    main .posts-container {
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 869px) {
+    .thumbnails-container {
+        flex-basis: 50%;
+    }
+}
+
